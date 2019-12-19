@@ -1,0 +1,41 @@
+.contenedorOterHerFran {
+  display: inline;
+}
+.contenedorOterHerFran > div {
+  box-sizing: border-box;
+  border: 1px solid blue;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+  float: left;
+  width: 50%;
+  min-height: 280px;
+  padding: 15px;
+  background-color: lightcyan;
+}
+
+@media screen and (max-width: 500px) {
+  .contenedorOterHerFran {
+    display: block;
+  }
+  .contenedorOterHerFran > div {
+    float: none;
+  }
+}
+.menuOterHerFran {
+  display: flex;
+  background-color: cyan;
+}
+.menuOterHerFran > div {
+  padding: 10px;
+  margin: 20px;
+  font-size: 1.2rem;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 450px) {
+  .menuOterHerFran {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=oterherfranhojaestilos_ej2.css.map */

@@ -1,0 +1,69 @@
+$color:blue;
+$fuente:Helvetica,sans-serif;
+$alineado:left;
+
+@mixin borde() {
+
+    box-sizing: border-box;
+    border: 1px solid $color;
+    text-align: $alineado;
+    font-family: $fuente;
+    
+}
+
+.contenedorOterHerFran {
+    display: inline;
+
+    > div {
+        @include borde;
+        float: left;
+        width: 50%;
+        min-height: 280px;
+        padding: 15px;
+        background-color: lightcyan;
+       
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .contenedorOterHerFran {
+
+        display: block;
+
+        > div {
+
+            float: none;
+
+        }
+
+    }
+
+}
+
+.menuOterHerFran {
+    display: flex;
+    background-color: cyan;
+
+    > div {
+
+        padding: 10px;
+        margin: 20px;
+        font-size: 1.2rem;
+        background-color: #f1f1f1;
+
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .menuOterHerFran {
+
+        flex-direction: column;
+
+    }
+
+}
