@@ -1,0 +1,88 @@
+body {
+
+    counter-reset:suscripcionOterHerFran ;
+
+}
+
+h1 {
+
+    counter-reset: seriesOterHerFran;
+
+}
+
+h2 {
+
+    counter-reset: actoresOterHerFran;
+
+}
+
+h1::before {
+
+    counter-increment: suscripcionOterHerFran;
+    content: "Suscripcion "counter(suscripcionOterHerFran) ". ";
+
+}
+
+h2::before {
+
+    counter-increment: seriesOterHerFran;
+    content: counter(suscripcionOterHerFran) ". "counter(seriesOterHerFran) " ";
+
+}
+
+h3::before {
+
+    counter-increment: actoresOterHerFran;
+    content: counter(suscripcionOterHerFran) ". "counter(seriesOterHerFran) ". "counter(actoresOterHerFran);
+
+}
+
+.contenedorOterHerFran {
+
+    display: flex;
+    min-width: 70%;
+    height: 300px;
+    background-color: rgb(207, 185, 185);
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    > div {
+        box-sizing: border-box;
+        border: 2px solid lightcoral;
+        padding: 20px;
+        font-size: 1.8rem;
+        height: 300px;
+        width: 20%;
+        text-align: center;
+        
+    }
+
+}
+
+@import 'parcial1OterHerFran.scss';
+
+.menuOterHerFran {
+    display: flex;
+    background-color: cyan;
+
+    > div {
+
+        padding: 10px;
+        margin: 20px;
+        font-size: 1.2rem;
+        background-color: #f1f1f1;
+
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    .menuOterHerFran {
+
+        flex-direction: column;
+
+    }
+
+}
